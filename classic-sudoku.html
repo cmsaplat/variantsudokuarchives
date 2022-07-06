@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<head>
+ <title> Classic Sudoku Rules - Variant Sudoku Archives</title>
+
+ <link rel="stylesheet" type="text/css" href="sudokustylesheet.css"/>
+
+</head>
+
+<body>
+
+ <ul>
+  <li><style="display:block;background-color:985ca2;"><img src="titleimg.png" alt="Variant Sudoku" style="width:100%;height:100%;"/></style></li>
+  <li><a href="index.html">Home</a></li>
+  <li><a href="classic-sudoku.html">Classic Sudoku Rules</a></li>
+  <li><a href="#">Arithmetic Variants</a></li>
+  <li><a href="#">Line Variants</a></li>
+  <li><a href="#"> Visual Cue Variants</a></li>
+ </ul>
+
+<h1>Classic Sudoku Rules</h1>
+
+<p><i>Most of this webpage is made for complete beginners at Sudoku.</i>
+<br><br>In normal sudokus, you are given a 9x9 grid, as shown below:</p>
+
+<img class="m diagram" src="classicsudokuimg.png" alt="Sudoku Grid"/>
+
+<p>Positions on this grid can be described with rows (lines of squares going
+   horizontally, aka R) and columns (lines of squares going vertically, aka C).
+   For example, the third square in the first small 3x3 box would be written as R1C3.
+<br><br><i>Your job is to fill in every column, row, and outlined 3x3 box with the digits
+   1 to 9.</i> That might be a little bit hard when you don't have any numbers to use
+   as a guideline though, so let's fix that!</p>
+
+<img class="m example diagram" src="classicclover.png" alt="Classic - clover!"/>
+<br><br><br><br><br><h3>Classic - clover! (Classic Sudoku)</h3>
+<ol>
+<li><a href="https://f-puzzles.com/?id=yh9v8arc" target="_blank" rel="noopener noreferrer">f-puzzles Link</a></li>
+<li><a href="https://tinyurl.com/zu6zwajs" target="_blank" rel="noopener noreferrer">CtC Link</a></li>
+
+<br><br><br><br><br><br><br><h2>Hints</h2>
+<p>This puzzle may seem unbreachable at first--it looks completely barren! Thankfully,
+   those specific digits allow us to use the most basic sudoku strategy of them all:
+   <i>process of elimination</i>.
+<br><br>Notice that three of the 7s on the grid (R3C1, R6C2, R7C4) intersect a
+   square without a 7. Because we know that each digit can only go into each row,
+   column, and square once, we can deduce that the 7 in that empty square must go in
+   R8C3.</p>
+<img class="m diagram" src="classiccloverdia1.png"/>
+<p>We can use this same strategy to find the rest of the 7s ...</p>
+<img class="m diagram" src="classiccloverdia2.png"/>
+<p>This also works on other digits. See a more discreet example with the 6s of this
+   puzzle:
+<br><i>To clear up confusion: the 6 in R7C3 forces the 6 in Box 9 to be in R8--
+   this means that the 6 in Box 8 must go into C6.</i></p>
+<img class="m diagram" src="classiccloverdia3.png"/>
+<p>You can use this technique throughout the rest of the puzzle--it's just a matter of
+   figuring out which squares to use at which times.</p>
+
+<h2>Additional Notes</h2>
+<p>This is the most basic of sudoku solving basics, and unfortunately, this
+   website wouldn't do the intricacies of classic sudoku justice (for this, I direct
+   you to <a href="https://www.sudoku9981.com/" target="_blank" rel="noopener noreferrer">Sudoku9981</a>).
+   However, many sudoku variants don't usually rely on the viewer knowing high-level
+   techniques--instead, you use the logical clues given to you by the variant's
+   setter. When classic sudoku logic does appear, it will usually be on the level
+   of the puzzle given here (though you will occasionally see cases of
+   <i>Swordfishes</i> or <i>Phistomefel's Rings</i>).</p>
+
+</body>
+
+</html>
