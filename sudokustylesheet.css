@@ -88,3 +88,7 @@
  .example {
   float: left;
  }
+
+ div {
+  margin-top: 0.1%;
+}
