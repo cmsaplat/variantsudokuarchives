@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+ <title>Line Variants - Variant Sudoku Archives</title>
+ <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+ <link rel="stylesheet" type="text/css" href="sudokustylesheet.css">
+</head>
+
+<body>
+
+<ul>
+  <li><style="display:block;background-color:985ca2;"><img src="images/titleimg.png" alt="Variant Sudoku" style="width:100%;height:100%;"/></style></li>
+  <li><a href="index.html">Home</a></li>
+  <li><a href="classic-sudoku.html">Classic Sudoku Rules</a></li>
+  <li><a href="arithmetic-variants.html">Arithmetic Variants</a></li>
+  <li><a href="line-variants.html">Line Variants</a></li>
+  <li><a href="visualcue-variants.html"> Visual Cue Variants</a></li>
+ </ul>
+
+<div class="bonkers">
+
+<h1 id="top">Line Sudoku Variants</h1>
+
+<p>Have you ever seen a Sudoku grid with a bunch of squiggly lines on the screen? Green,
+  magenta, orange, maybe some odder colours like grey? Those lines usually indicate
+  <i>restrictions unique to specific cells (as in the cells that they cover)</i>.
+  However, every line has its different restrictions--we'll be covering the most
+  common ones in this webpage.</p>
+
+<ol class="categories" style="list-style-type:disc;">
+ <li><a href=#germanwhisper>German Whispers</a></li>
+ <li><a href=#renban>Renbans</a></li>
+ <li><a href=#entropic>Entropics</a></li>
+ <li><a href=#palindrome>Palindromes</a></li>
+ <li><a href=#regionsum>Region Sums</a></li>
+</ol>
+
+<br><br><h2 id="germanwhisper">German Whispers</h2>
+<p class="rules">Classic sudoku rules apply. Additionally, every digit on a line must differ
+  from its neighbour (on the line) by at least 5 (inclusive). Digits on a line can repeat
+  if allowed by classic sudoku rules.
+<br>+ German Whisper lines are normally green, specifically neon green, though
+  it may be different depending on the setter's stylistic preferences.</p>
+<p>There are a few interesting tidbits about this variant, which are all useful
+  for solving.</p>
+<div class="hints"
+<p class="parappa">Firstly, because of the digits we're limited to (1-9, as per classic sudoku
+  rules), the digits on the line go in an up-and-down pattern (up being above 5, down
+  meaning below 5). This means that, once you have a number down, you can usually
+  get a general scope of the rest of the numbers on the line.</p>
+<img class="region" src="dia/germanwhisperdiagram.png" alt="Up-and-Down Depiction">
+<p class="parappa">This represents an ideal situation, where, with this information,
+  you're able to ascribe digits to certain line cells.</p>
+<img class="region" src="dia/germanwhisperdia2.png" alt="Filling In Numbers">
+<p class="parappa">Secondly, only specific digits can go on the line. You can't put a
+  5 on any point of a german whisper line without the rest of the line being unsolvable.
+  4s and 6s can only go on the ends or (region-crossing) turns of a line, because
+  the values before and after them are forced to be the same (i.e., 949 or 161)--this
+  would break classic sudoku rules. You can use this to fill in the region above:</p>
+<img class="region" src="dia/germanwhisperdia3.png" alt="Filling The Region">
+</div>
+
+<br><img class="m example diagram" src="images/germanwhisperclover.png" alt="German Whispers - clover!">
+<br><br><br><br><br><h3>German Whispers - clover!</h3>
+<ol>
+<li><a href="https://f-puzzles.com/?id=yghxy2yn" target="_blank" rel="noopener noreferrer">f-puzzles Link</a></li>
+<li><a href="https://tinyurl.com/49vptpps" target="_blank" rel="noopener noreferrer">CtC Link</a></li>
+</ol>
+  
+<br><br><br><br><br><br><br><h2 id="renban">Renbans</h2>
+<p><i>Classic sudoku rules apply. Additionally, every digit on a line must be
+  consecutive, though not necessarily placed in order.
+<br>+ Renban Lines are normally magenta, specifically neon magenta, though
+  it may be different depending on the setter's stylistic preferences.</i></p>
+<p>Renbans on higher levels have a tendency to be abstract, but for simplicity's sake,
+  we'll be covering the strategies you'd see in a lower or intermediate level
+  renban sudoku.
+<br><br>Firstly, on renban lines with 1s or 9s, it's best to think of that line as
+  "branching out" from said digit. For example, if you had a renban line that was five
+  cells long and the digit 1 was on it, then the digits on that line must be 1, 2, 3,
+  4, and 5.
+<br><br>Secondly, if a renban line has been given two non-consecutive digits, then
+  all digits in between those two <i>must</i> be on the line.
+<br><br>Thirdly, if said renban is restricted to one column, row, or box, then
+  the given numbers must be completely eliminated from the renban. This means that
+  any consecutive string containing said number <i>cannot</i> be the solution to that
+  line (note that this doesn't mean individual digits can't go on that line--just that
+  string in particular). This usually isn't as useful as the other two above, but
+  it's good to keep in mind, especially for cases where you may not be able to see a
+  way forward with the first two strategies.</p>
+
+<img class="m example diagram" src="dia/renbanclover.png" alt="Renban - clover!">
+<br><br><br><br><br><h3>Renban - clover!</h3>
+<ol>
+<li><a href="https://f-puzzles.com/?id=y3d8b9sz" target="_blank" rel="noopener noreferrer">f-puzzles Link</a></li>
+<li><a href="https://tinyurl.com/2p8j8p9p" target="_blank" rel="noopener noreferrer">CtC Link</a></li>
+</ol>
+
+<br><br><br><br><br><br><br><h2 id="entropic">Entropics</h2>
+<p class="rules">Classic sudoku rules apply. Additionally, every line must contain a  set with
+  a low digit (123), medium digit (456), and high digit (789). Digits on a line
+  can repeat if allowed by classic sudoku rules.
+<br>+ Entropic lines are normally peach-coloured, though it may be different depending
+  on the setter's stylistic preferences.</p>
+<p>Something odd about this variant is that its solving patterns are extremely
+  dependent on the setter's style. However, the best place to start is by determining
+  a lined cell's <i>parity</i>--that is, whether if it's a low, medium, or high digit.
+  Think of it as marking the up-and-down of German Whisper lines.
+<br><br>... and unfortunately, that is where the strategy for solving entropic lines
+  diverges. Becauuse they're so versatile, there's no common use for them--their most
+  common application (at least in simple variant puzzles) is their low-middle-high
+  parity being used to deduce values on the line itself.</p>
+
+<img class="m example diagram" src="dia/entropicclover.png" alt="Entropic Lines - clover!">
+<br><br><br><br><br><h3>Entropic Lines - clover!</h3>
+<ol>
+<li><a href="https://f-puzzles.com/?id=2c8hfau2" target="_blank" rel="noopener noreferrer">f-puzzles Link</a></li>
+<li><a href="https://tinyurl.com/mtfycpcw" target="_blank" rel="noopener noreferrer">CtC Link</a></li>
+</ol>
+
+<br><br><br><br><br><br><br><h2 id="palindrome">Palindromes</h2>
+<p class="rules">Classic sudoku rules apply. Additionally, every line must read the
+  same in both directions. Digits may repeat on palindromic lines.
+<br>+ Palindromic lines are normally blue, though it may be different depending on the
+  setter's stylistic preferences.</p>
+
+<div class="hints">
+<p class="parappa">The logic behind palindromes is surprisingly simple--and I don't say that with
+  strings attached.
+<br><br>The best way to work out a palindromic line is to first split the line in
+  half. Now, notice that the palindrome's middle acts like a "point of reflection":</p>
+<img class="m special" src="dia/palindia1.png" alt="Line of Reflection on a Palindrome">
+<p class="parappa rules">+ Note that digits can repeat on palindromic lines--the
+  colours are to indicate a digit's position, not necessarily its uniqueness.</p>
+<p class="parappa">As an example, notice the 7 in R5C4. It's not on that segment of the
+  palindromic line, and can't be, because it's already been placed; and because every
+  reflected digit must be the same, the 7 digit cannot be on the other side of the
+  palindrome.
+<br><br>This means that you can a place a 7 like so (considering classic sudoku rules):</p>
+<img class="m special" src="dia/palindia3.png" alt="Removing a Digit due to Reflective Property">
+</div>
+
+<br><img class="m example diagram" src="images/palindromesam.png" alt="Palindromes - Sam Cappleman-Lynes">
+<br><br><br><br><br><h3>Palindromes - Sam Cappleman-Lynes</h3>
+<ol>
+<li><a href="https://f-puzzles.com/?id=ydww6ww9">f-puzzles Link</a></li>
+<li><a href="https://tinyurl.com/3sn56b8f">CtC Link</a></li>
+</ol>
+
+<br><br><br><br><br><br><br><h2 id="regionsum">Region Sums</h2>
+<p class="rules">Classic sudoku rules apply. Additionally, every region (i.e., 3x3
+  square) a line passes through must add to the same sum. Some sums must be
+  deduced.
+<br>+Region sum lines are normally blue, though it may be different depending
+  on the setter's stylistic preferences.</p>
+<div class="hints">
+<p class="parappa">The best way to approach region sum lines is to treat every section of the line as
+  its own pseudo-killer cage. You can use minimum/maximum killer logic on these, which
+  helps give you some context for what you're looking for in said line.
+<br><br>The special aspect of region sum lines is the unique way that you can identify
+  minimum and maximum values using them. Take the yellow highlighted section below:</p>
+<img class="m special" src="dia/regionsumdia1.png" alt="Minimum Identification Example">
+<p class="parappa">You can use this to rule out some digits for each pseudo-cage.
+  1/2 can't go into the cage containing 6 (as that would be 8 or lower, which would
+  break the region sum line), and 9 from the 8 cage (as the 6 cage wouldn't be able
+  to add to that value, also breaking the line).</p>
+</div>
+
+<br><img class="m example diagram" src="images/regionsumclover.png" alt="Region Sum Lines - clover!">
+<br><br><br><br><br><h3>Region Sum Lines - clover!</h3>
+<ol>
+<li><a href="https://f-puzzles.com/?id=y9hkb2ns" target="_blank" rel="noopener noreferrer">f-puzzles Link</a></li>
+<li><a href="https://tinyurl.com/35e4j9n6" target="_blank" rel="noopener noreferrer">CtC Link</a></li>
+</ol>
+<br><br><br><br><br><br><br>
+
+<footer>
+
+<div id="footerpad">
+<address>
+<strong>E-mail us:</strong> <a href="mailto:no@gmail.com">varsudoku@gmail.com</a>
+<br><strong>Phone Number:</strong> +64 12 345 6789
+<br><br>Owned by VSA Team
+</address>
+</div>
+
+</footer>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,152 @@
+ body {
+  font: Lucida Bright, Garamond, Times New Roman, serif;
+ }
+
+ h1 {
+  margin-left: 27.5%;
+  padding-top: 0.0001%;
+  padding-right: 5%;
+ }
+
+ p {
+  margin-left: 27.5%;
+  padding-top: 0.0001%;
+  padding-right: 5%;
+ }
+
+
+ ul {
+  list-style-type: none;
+  font-size: 175%;
+  width: 22.5%;
+  height: 100%;
+  background-color: #985ca2;
+  margin-left: 0%;
+  margin-top: 0%;
+  float: left;
+  position: fixed;
+ }
+
+ ul a {
+  display: block;
+  background-color: #985ca2;
+  color: #f1f1f1;
+  padding: 5% 15%;
+  text-decoration: none;
+  font-weight: bold;
+ }
+
+ ul a:hover {
+  background-color: #ca80d5;
+ }
+
+ h2 {
+  margin-left: 27.5%;
+ }
+
+ ol {
+  list-style-type: none;
+ }
+
+ ol a {
+  color: #5271ff;
+ }
+
+ ol a:hover {
+  color: #8298ff;
+ }
+
+ .categories {
+  margin-left: 27.5%;
+ }
+
+ p a {
+  color: #5271ff;
+ }
+
+ p a:hover {
+  color: #8298ff;
+ }
+
+ .desc {
+  margin-left: 30%;
+ }
+
+ .m {
+  margin-left: 28.5%;
+ }
+
+ .diagram {
+  width: 25%;
+  height: 25%;
+ }
+
+ .example {
+  float: left;
+ }
+
+ .bonkers {
+  padding-top: 0.1%;
+ }
+
+ .hints {
+  margin-left: 27.5%;
+  height: 300px;
+  overflow-y: scroll;
+  border-style: solid;
+  border-width: 2%;
+ }
+
+ .special {
+  align: left;
+  margin-left: 0%;
+  width: 30%;
+  height: 90%;
+ }
+
+ .parappa {
+  margin-left: 1%;
+ }
+
+ footer {
+  display: block;
+  background-color: #A898AF;
+  margin-left: 26%;
+  height: 100px;
+  width: 74%;
+  color: white;
+  position: sticky;
+  bottom: 0px;
+  align:justify;
+ }
+
+ #footerpad {
+  padding-left: 4%;
+  padding-top: 1.5%;
+ }
+
+ address a {
+  color: white;
+ }
+
+ address a:hover {
+  color: #e0e0e0;
+ }
+
+ .rules {
+  font-style: italic;
+ }
+
+ #thing {
+  align: left;
+  margin-left: 0%;
+  width: 30%;
+  height: 50%;
+ }
+
+ .region {
+  align: left;
+  margin-left: 1%;
+  width: 20%;
+  height: 60%;
+ }

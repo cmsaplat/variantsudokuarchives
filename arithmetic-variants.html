@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+ <title>Arithmetic Variants - Sudoku Variant Archives</title>
+ <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+ <link rel="stylesheet" type="text/css" href="sudokustylesheet.css"/>
+
+</head>
+
+<body>
+
+ <ul>
+  <li><style="display:block;background-color:985ca2;"><img src="images/titleimg.png" alt="Variant Sudoku" style="width:100%;height:100%;"/></style></li>
+  <li><a href="index.html">Home</a></li>
+  <li><a href="classic-sudoku.html">Classic Sudoku Rules</a></li>
+  <li><a href="arithmetic-variants.html">Arithmetic Variants</a></li>
+  <li><a href="line-variants.html">Line Variants</a></li>
+  <li><a href="visualcue-variants.html">Visual Cue Variants</a></li>
+ </ul>
+
+<div class="bonkers">
+<h1 id="top">Arithmetic Sudoku Variants</h1>
+
+<p>For those of you who don't like math, who just read this header as we speak, don't
+   worry! As the name says there is maths involved in all of these variants, but they
+   all follow the <i>four basic mathematical operations</i> (aka addition, subtraction,
+   multiplication, division). The most common arithmetic variants usually limit
+   themselves to addition.</p>
+
+<ol class="categories" style="list-style-type:disc;">
+ <li><a href=#killer>Killer</a></li>
+ <li><a href=#little-killer>Little Killer</a></li>
+ <li><a href=#arrows>Arrows</a></li>
+ <li><a href=#x-sums>X-Sums</a></li>
+ <li><a href=#sandwich>Sandwich</a></li>
+</ol>
+
+<br><br><h2 id="killer">Killer</h2>
+<p class="rules">Classic sudoku rules apply. Additionally, there are dotted "cages" with a small
+  number on the grid--digits in these cages may not repeat, and must sum to the value
+  indicated in the cage's corner.</p>
+<p>Sudokus of this kind tend to not start out with many numbers, and are thus
+  reliant on mathematical logic--that sounds fancy, but really, all you have to do is
+  a bit of subtraction.</p>
+<div class="hints">
+<p class="parappa">It's important to remember that every row, column, and box contains the
+  numbers 1 to 9 exactly once--this means that every individual row, column, and box
+  sums to 45. When you are given a cage restricted to a single one of these domains,
+  you can subtract that cage's total from 45. This gives the remainder of the
+  uncaged digits within that region, giving you a "pseudo-killer cage" for additional
+  deductions.</p>
+<img class="region" src="dia/killerdiagram.png" alt="Killer Subtraction Technique">
+<p class="parappa">45 - 10 - 24 = 11. This is the sum of the highlighted cells <i>
+  within that region</i>. This techniques does not apply to cages that cross over
+  columns, rows, or regions.
+<br><br>You can also deduce specific values in cages without having to do any maths.
+  The digits inside a cage are limited by the no-cage repeat rule, and further by
+  classic sudoku rules. For example, a 4 cage can only contain the digits 1 and 3;
+  likewise, a (3 celled) 24 cage can only contain the digits 7, 8, and 9.</p>
+<img class="region" src="dia/killerdiagram2.png" alt="Limiting Technique">
+<p class="parappa">A 3-celled 24 cage can only contain the digits 789, a 4-celled 10
+  cage can only contain the digits 1234, which leaves 5 and 6 in the gaps (which does,
+  in fact, sum to 11, as we proved above).</p>
+</div>
+
+<br><img class="m example diagram" src="images/killerclover.png" alt="Killer - clover!">
+<br><br><br><br><br><br><h3>Killer - clover!</h3>
+<ol>
+<li><a href="https://f-puzzles.com/?id=yx97msga" target="_blank" rel="noopener noreferrer">f-puzzles Link</a></li>
+<li><a href="https://tinyurl.com/uwywjtev" target="_blank" rel="noopener noreferrer">CtC Link</a></li>
+</ol>
+
+<br><br><br><br><br><br><br><h2 id="little-killer">Little Killer</h2>
+<p class="rules">Classic sudoku rules apply. Additionally, there are numbers outside of the grid
+  pointing at a certain diagonal; this number gives the sum of every digit along its
+  indicated diagonal. Unlike normal killers, digits can repeat on little killer
+  diagonals if allowed by classic rules.</p>
+<p>The logic of a little killer is a bit more difficult to describe fully.
+  Firstly, any little killer string that stays inside one box acts as a usual
+  killer cage--it sums to the indicated number with no repeats.
+<br><br>When it gets longer than 3 digits (i.e., going outside of a single region),
+  this allows for repeats--and because of that, you see numbers that normally wouldn't
+  even show up in your usual killer grid.
+<br><br>In cases of 4-6 digits, it's helpful to do a little "brute-forcing"
+  through numbers and derive deductions from those results. For example, for a large
+  number, identify the lowest digits and highest digits you can use to reach the
+  indicated total, and <i>then</i> use your results as a constrant on your
+  classic sudoku scanning <i>(e.g., "I can't put a 9 in this box because [constraint
+  given by little killer diagonal]"</i>).
+<br><br>Cases of 7-9 digits are normally used to disambiguate scanning later on.
+  It's best not to worry about these until you have a good chunk of the grid filled
+  up through classic sudoku scanning--once you do have to worry about them, you
+  can usually use a mix of normal killer deduction and little-killer only
+  constraints.</p>
+
+<img class="m example diagram" src="images/littleclover.png" alt="Little Killer - clover!">
+<br><br><br><br><br><h3>Little Killer - clover!</h3>
+<ol>
+<li><a href="https://f-puzzles.com/?id=yzx2sy83" target="_blank" rel="noopener noreferrer">f-puzzles Link</a></li>
+<li><a href="https://tinyurl.com/32z3tvcs" target="_blank" rel="noopener noreferrer">CtC Link</a></li>
+</ol>
+
+<br><br><br><br><br><br><br><h2 id="arrows">Arrows</h2>
+<p class="rules">Classic sudoku rules apply. Additionally, there are arrows attached to circles;
+  the digits along the arrow must sum to the number inside the arrow's circle. Digits
+  can repeat along arrows if allowed by classic rules. Circle values may have
+  to be deduced by the player.</p>
+<p>Arrows use a mix of little killer AND killer techniques, which have
+  already been covered in the articles above.
+<br><br>However, something unique about this variant is the fact that the totals
+  are <i>inside</i> the grid, and normally have to be deduced by the player. You
+  can deduce these totals by looking at how many digits the arrow spans, and
+  figuring out the lowest and highest numbers you could make with those squares.
+  The total itself can be further limited by the size of the arrow's circle
+  (it normally covers one cell, especially in simpler arrow sudokus, but can
+  occasionally cover 2 or even 3 cells).</p>
+
+<img class="m example diagram" src="images/arrowclover.png" alt="Arrow - clover!">
+<br><br><br><br><br><h3>Arrow - clover! (Arrow Sudoku)</h3>
+<ol>
+<li><a href="https://f-puzzles.com/?id=yf349rgw" target="_blank" rel="noopener noreferrer">f-puzzles Link</a></li>
+<li><a href="https://tinyurl.com/37sv5css" target="_blank" rel="noopener noreferrer">CtC Link</a></li>
+</ol>
+
+<br><br><br><br><br><br><br><h2 id="x-sums">X-Sums</h2>
+<p class="rules">Classic sudoku rules apply. Additionally, there are numbers outside of the grid,
+  aligned with various rows and columns; these numbers give the sum of the nearest X
+  boxes, X being the nearest digit to that clue.
+<br>For example, say you had a clue of 6. Valid solutions to this would be 24, or 321/312.</p>
+<p>While the logic of an x-sums variant may sound intimidating, it probably has clearer
+  deductive logic than most arithmetic variants.</p>
+<div class="hints">
+<p class="parappa">X-sums are determined by the digit closest to a sum in that sum's
+  said column/row. Think of this as a pseudo-killer cage that changes size in relation
+  to that digit. As a visual:</p>
+<img class="m" id="thing" src="dia/xsumsgif1.gif" alt="Alternating Killer Cages">
+<p class="parappa">Once you figure out what the first digit is, you can then treat it
+  as a normal killer cage (subtraction, deduction inside the cage).
+<br><br>In the case that you need to work backwards, then a bit of brute force is
+  involved. If a column/row's sum is small, then you can run through the possibilities
+  of different-sized "cages" and sort them out by possibility (<i>e.g., "Can the
+  first digit of this be five? No, because [a] ..."</i>).
+<br><br>If the sum is large, then subtract the sum from 45 and identify the
+  pseudo-cage starting from the <i>opposite side</i> of the column. Let's go through
+  an example of this technique.</p>
+<img class="m" style="align:left;margin-left:0%;width:70%;height:20%;" src="dia/xsumslong1.png" alt="X-sum of 42">
+<p class="parappa">You can subtract 42 from 45, giving a result of 3. The killer
+  cage protruding from the right of this row must equal 3 (single 3, or a 12 pair).
+  This means that the first digit is either 7 or 8.
+<br><br>The possibilities for the right cage are limited by the 6 <i>also</i> coming
+  from the right, which means we must consider the first digit on the right as well.
+  It's impossible to start this sum with 1, and starting it with a 2 would force a 2/4
+  pair on the right, which is incompatible with both cases of the left pseudo-cage.
+  This narrows it down to 3, which fulfills the requirements of an 8-cell long
+  pseudo-cage. Therefore:</p>
+<img class="m" style="align:left;margin-left:0%;width:70%;height:25%;" src="dia/xsumslong2.png" alt="Visual of paragraph above.">
+<p class="parappa">And, as a bonus, the 3-cell-long pseudo-cage on the right forces
+  a 1/2 pair.</p>
+</div>
+
+<br><img class="m example diagram" src="images/xsumsclover.png" alt="X-Sums - clover!">
+<br><br><br><br><br><h3>X-Sums - clover!</h3>
+<ol>
+<li><a href="https://f-puzzles.com/?id=yf54834r" target="_blank" rel="noopener noreferrer">f-puzzles Link</a></li>
+<li><a href="https://tinyurl.com/ymmeadmb" target="_blank" rel="noopener noreferrer">CtC Link</a></li>
+</ol>
+
+<br><br><br><br><br><br><br><h2 id="sandwich">Sandwich</h2>
+<p class="rules">Classic sudoku rules apply. Additionally, there are numbers outside of the grid,
+  aligned with various rows and columns; these numbers give the sum of every digit
+  in-between that column/row's 1 and 9 (1 and 9 themselves excluded).</p>
+<p>For this variant, it's crucial that you find out where the grid's 1s and 9s are
+  first (as the killer logic plays in here). You can do this by finding an already
+  existing 1 and 9, and if a sum has been assigned to that row/column, you can guess
+  where its corresponding 1/9 goes in that row/column based on killer cage maximums
+  and minimums (i.e., what's the least/most amount of digits I could meet this
+  sum with?).</p>
+
+<img class="m example diagram" src="dia/sandwichclover.png" alt="Sandwich - clover!">
+<br><br><br><br><br><h3>Sandwich - clover!</h3>
+<ol>
+<li><a href="https://f-puzzles.com/?id=yj9dosf6" target="_blank" rel="noopener noreferrer">f-puzzles Link</a></li>
+<li><a href="https://tinyurl.com/273e5pwa" target="_blank" rel="noopener noreferrer">CtC Link</a></li>
+</ol>
+<br><br><br><br><br><br><br>
+
+<footer>
+
+<div id="footerpad">
+<address>
+<strong>E-mail us:</strong> <a href="mailto:no@gmail.com">varsudoku@gmail.com</a>
+<br><strong>Phone Number:</strong> +64 12 345 6789
+<br><br>Owned by VSA Team
+</address>
+</div>
+
+</footer>
+
+</div>
+
+</body>
+
+</html>

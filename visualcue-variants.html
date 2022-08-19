@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+ <title>Visual Cue Variants - Variant Sudoku Archives</title>
+ <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+ <link rel="stylesheet" type="text/css" href="sudokustylesheet.css">
+</head>
+
+<body>
+
+<ul>
+  <li><style="display:block;background-color:985ca2;"><img src="images/titleimg.png" alt="Variant Sudoku" style="width:100%;height:100%;"/></style></li>
+  <li><a href="index.html">Home</a></li>
+  <li><a href="classic-sudoku.html">Classic Sudoku Rules</a></li>
+  <li><a href="arithmetic-variants.html">Arithmetic Variants</a></li>
+  <li><a href="line-variants.html">Line Variants</a></li>
+  <li><a href="visualcue-variants.html"> Visual Cue Variants</a></li>
+ </ul>
+
+<div class="bonkers">
+
+<h1>Visual Cue Sudoku Variants</h1>
+
+<p>Perhaps you've seen a sudoku that doesn't apply to any of the variants covered above--some
+  of the digits may be highlighted, there might be lines with bulbs, there's dots--the
+  list of their variety is endless. Thankfully, there's some common variants that
+  are must-knows in the sudoku community; these will be explained in the articles
+  below.</p>
+
+<ol class="categories" style="list-style-type:disc;">
+<li><a href="#thermo">Thermo</a></li>
+<li><a href="#kropki">Kropki/Consecutive</a></li>
+<li><a href="#fortress">Fortress</a></li>
+<li><a href="#extra">Extra Regions</a></li>
+<li><a href="#irregular">Irregular</a></li>
+</ol>
+
+<br><br><h2 id="thermo">Thermo</h2>
+<p class="rules">Classic sudoku rules apply. Additionally, digits along a bulbed line
+  (commonly referred to as thermometers) must be in increasing order. Digits may not
+  repeat on thermometers.
+<br>+ There are exceptions to the last sentence, specifically slow thermos. This
+  allows digits to repeat on thermometers, as long as it's still in ascending order.</p>
+<div class="hints">
+<p class="parappa">The main aspect of thermo sudokus is immediate elimination: notably that 1s can
+  only go on the bulb end of a thermo, and 9s can only go on the tip. Most
+  beginner-level sudokus will use this kind of elimination.
+<br><br>There's also a general restrictive property on thermos. Let's look at the
+  diagram below as an example:</p>
+<img class="m region" src="dia/thermodia1.png" alt="Thermo Diagram High">
+<p class="parappa">Because thermos can only go in increasing order from the bulb, the digit on the tip
+  must be 8--this is the only digit higher than 7 that's still valid in this region
+  (see the given 9).
+<br><br>The reverse is true for lower digits:</p>
+<img class="m region" src="dia/thermodia2.png" alt="Thermo Diagram Low">
+<p class="parappa">The only digit lower than 2 is one, so the bulb of this thermo
+  must contain said digit 1.</p>
+</div>
+
+<br><img class="m example diagram" src="images/thermoclover.png" alt="Thermo - clover!">
+<br><br><br><br><br><h3>Thermo - clover!</h3>
+<ol>
+<li><a href="https://f-puzzles.com/?id=ygeeu4fl" target="_blank" rel="noopener noreferrer">f-puzzles Link</a></li>
+<li><a href="https://tinyurl.com/ystvdt9a" target="_blank" rel="noopener noreferrer">CtC Link</a></li>
+</ol>
+
+<br><br><br><br><br><br><br><h2 id="kropki">Kropki/Consecutive</h2>
+<p class="rules">Classic sudoku rules apply. Additionally, digits connected by a white
+  dot are consecutive to each other, and digits connected by a black dot must be in a
+  1:2 ratio.
+<br>+ Some consecutive/kropki sudokus may include a rule known as a "negative
+  constraint"--that is, no orthogonally adjacent** cells except those indicated may
+  be consecutive/in a 1:2 ratio. If this is not written down, then it's implied that
+  unindicated cells may be consecutive to/in a 1:2 ratio with each other.</p>
+<p>Technically speaking, these are two different variants, but because they're
+  so commonly used in tandem, it would be easier to explain these in the same
+  article.</p>
+<div class="hints">
+<p class="parappa">Firstly, kropki, i.e. the black dots. There are two special restraints that
+  come with this variant:</p>
+<ol style="list-style-type:disc;">
+<li>For kropki strings that are three cells long, both a 2 and 4 must go into them.
+  This is because three cell long strings must either be 1/2/4, or 2/4/8.</li>
+<li>The digits 5, 7, and 9 cannot go into a kropki, no matter what. This doesn't have
+  as many applications, but some setters may play around with this restriction, so it's
+  still important to keep in mind. </li>
+</ol>
+<p class="parappa">Secondly, consecutive, i.e. the white dots. There aren't many
+  strategies for consecutive dots other than common sense, but there are some strange
+  uses for them that may come in handy when you seek out sudoku solving.</p>
+<ol style="list-style-type:disc;">
+<li>Setters will occasionally use consecutive dots in straight chains. In this case,
+  any given digits in the chain's column/row can be used for deductive purposes: if
+  a digit is given inside the chain, then you can figure out the rest of the digits
+  inside the chain (which normally come in pairs); if a digit is given outside of the
+  chain, it can be used to rule out any chains that would need to use said digit.</li>
+<li>For lack of better phrasing, the "stairwell effect"--see the example puzzle given
+  below. These are good for finding the cells immediately around digits--however,
+  things can get messy if you solely rely on them for progress, so it's best to use
+  them as hints appear/to disambiguate, and then continue.</li>
+</ol>
+</div>
+
+<br><img class="m example diagram" src="images/ratioclover.png" alt="Pairs/Ratio - clover!">
+<br><br><br><br><br><h3>Pairs/Ratio - clover!</h3>
+<ol>
+<li><a href="https://f-puzzles.com/?id=yeqy3x9t" target="_blank" rel="noopener noreferrer">f-puzzles Link</a></li>
+<li><a href="https://tinyurl.com/9exrn29n" target="_blank" rel="noopener noreferrer">CtC Link</a></li>
+</ol>
+
+<br><br><br><br><br><br><br><h2 id="fortress">Fortress</h2>
+<p class="rules">Classic sudoku rules apply. Additionally, the digits in shaded cells
+  must be greater than its adjacent neighbours.</p>
+<div class="hints">
+<p class="parappa">On paper, the logic behind fortress sudokus are easy enough to follow: the lowest
+  digits in a column, row, or region can never be inside a shaded cell; likewise the
+  highest in said regions can never be adjacent to a shaded cell.
+<br><br>The difficulty arises when you're putting that logic into context. The best way
+  to work around this is to consider the fortress as not just the shaded cell, but the
+  adjacent cells around it. Take the following visual as an example:</p>
+<img class="m region" src="dia/fortressdia2.png" alt="Full Fortress Inside a Region">
+<p class="parappa rules">+ In this instance, the whole fortress in contained inside one
+  region--but if you have a fortress that crosses over regions, it's best to just
+  consider the region that contains the most fortress cells.</p>
+<p class="parappa">Notice the shaded cell (i.e., the cell with arrows) in the middle.
+  This must be greater than at least 4 digits. Also notice that digits 6, 7, 8, and 9
+  are taken; this leaves digits 12345. 5 is the only digit greater than the remaining
+  4 digits, and so, must be the digit in the shaded cell.</p>
+<img class="m region" src="dia/fortressdia3.png" alt="Filled Fortress">
+</div>
+
+<br><img class="m example diagram" src="images/fortressclover.png" alt="Fortress - clover!">
+<br><br><br><br><br><h3>Fortress - clover!</h3>
+<ol>
+<li><a href="https://f-puzzles.com/?id=yjryhuka">f-puzzles Link</a></li>
+<li><a href="https://tinyurl.com/34n427bn">CtC Link</a></li>
+</ol>
+
+<br><br><br><br><br><br><br><h2 id="extra">Extra Regions</h2>
+<p class="rules">Classic sudoku rules apply. Additionally, fill every shaded region
+  with the digits 1-9.</p>
+<div class="hints">
+<p class="parappa">There are two core strategies for extra regions.
+<br><br>The first is realising that, because the shaded region must also be filled
+  with digits 1-9, it is susceptible to column and row restraints. See the image below
+  as an example:</p>
+<img class="m special" src="dia/extredia1.png" alt="Elimination by Columns">
+<p class="parappa">The second is realising that both normal <i>and</i> extra regions
+  are forced to coexist. Both must contain the digits 1-9--this means that, in
+  specific cases of overlap, you can eliminate digits in specific areas of an extra
+  region.</p>
+<img class="m" style="width:27%;height:80%;align:left;margin-left:0%;" src="dia/extredia2.png" alt="Regional Deduction">
+<p class="parappa">In the case of this image, the 1, 2, and 3 can't go into the shaded
+  2x2 inside its own region, so they must go on the outside edge of the extra region.
+  Likewise, the extra region's 4 and 5 can't go in that same 2x2 square, so they must
+  go into the unshaded area of the upper left box.</p>
+</div>
+
+<br><img class="m example diagram" src="images/windokuclover.png" alt="Windoku - clover!">
+<br><br><br><br><br><h3>Windoku - clover!</h3>
+<ol>
+<li><a href="https://f-puzzles.com/?id=yjzyvdn9" target="_blank" rel="noopener noreferrer">f-puzzles Link</a></li>
+<li><a href="https://tinyurl.com/jr9a3hmw" target="_blank" rel="noopener noreferrer">CtC Link</a></li>
+</ol>
+
+<br><br><br><br><br><br><br><h2 id="irregular">Irregular</h2>
+<p class="rules">Classic sudoku rules apply. However, some or all regions are
+  irregularly shaped (i.e., not 3x3 squares).</p>
+<p>I believe that a warning is in place. This variant is one of the hardest to explain--
+  mainly because there's infinite possibilities for irregular regions, and you will
+  need to see the <i>unique</i> relationships between a given sudoku's regions--something
+  that pure memorising will not prepare you for. For this reason, this article will
+  not be giving you information--rather, it will be explaining a way of thinking
+  about irregular regions.</p>
+<div class="hints">
+<p class="parappa">The common link between all irregular sudokus is column and row
+  constraints. Regions will usually be designed around these restrictions. Let's go
+  through an example of this structure:</p>
+<img class="m special" src="dia/irregdia1.png" alt="Irregular Row Deduction">
+<p class="parappa">You can fill in the rest of the middle with digits 5-9. Because
+  this row also happens to be part of a <i>region</i> (the central cross), you can
+  fill in the rest of the region like so:</p>
+<img class="m special" src="dia/irregdia2.png" alt="Filling in Regions">
+<p class="parappa">You may notice that the 1/2/3/4 cells create a group, which means
+  that those digits cannot go anywhere else in that column except their marked spots.
+  You can use this for restrictive purposes on regions that contain this column (i.e.,
+  the 2nd and 8th regions). Pleasantly, this gives us the following:</p>
+<img class="m special" src="dia/irregdia3.png" alt="Irregular Column Deduction">
+<p class="parappa">You may be noticing ways to move forward by now. If you do, then I
+  highly encourage you to continue on your own and analyse the rest of this example's
+  regions for yourself.</p>
+</div>
+
+<br><img class="m example diagram" src="images/irregularclover.png" alt="Irregular - clover!" />
+<br><br><br><br><br><h3>Irregular - clover!</h3>
+<ol>
+<li><a href="https://f-puzzles.com/?id=ygcce8w4" target="_blank" rel="noopener noreferrer">f-puzzles Link</a></li>
+<li><a href="https://tinyurl.com/a2thm7yd" target="_blank" rel="noopener noreferrer">CtC Link</a></li>
+</ol>
+<br><br><br><br><br><br><br>
+
+<footer>
+
+<div id="footerpad">
+<address>
+<strong>E-mail us:</strong> <a href="mailto:no@gmail.com">varsudoku@gmail.com</a>
+<br><strong>Phone Number:</strong> +64 12 345 6789
+<br><br>Owned by VSA Team
+</address>
+</div>
+
+</footer>
+
+</div>
+
+</body>
+
+</html>
